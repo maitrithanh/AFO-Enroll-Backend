@@ -10,6 +10,7 @@ const enrollSchema = new mongoose.Schema(
     fullNameChild: {
       type: String,
       required: "Họ tên trẻ là là bắt buộc!",
+      unique: true,
       max: 25,
     },
     phoneNumber: {
@@ -24,7 +25,6 @@ const enrollSchema = new mongoose.Schema(
     email: {
       type: String,
       required: "Địa chỉ Email là bắt buộc!",
-      unique: true,
       lowercase: true,
       trim: true,
     },

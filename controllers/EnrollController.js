@@ -30,7 +30,6 @@ export async function addEnroll(req, res) {
   })
     .then((data) => {
       console.log("Thêm mới thành công.");
-      console.log(data);
       res.status(200).json({
         status: "success",
         data: data,

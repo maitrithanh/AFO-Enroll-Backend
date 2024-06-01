@@ -1,5 +1,6 @@
 import express from "express";
 import EnrollRouter from "./EnrollRoute.js";
+import AttendanceRouter from "./AttendanceRoute.js";
 
 const app = express();
 app.get("/", (req, res) => {
@@ -17,5 +18,6 @@ app.get("/", (req, res) => {
   }
 });
 app.use("/enroll", EnrollRouter);
+app.use("/ah", AttendanceRouter);
 
 export default app;
